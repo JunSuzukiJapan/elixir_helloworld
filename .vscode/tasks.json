@@ -33,6 +33,45 @@
             }
         },
         {
+            "label": "escript.build",
+            "type": "shell",
+            "command": "mix escript.build",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "panel": "new"
+            },
+            "problemMatcher": {
+                "owner": "elixir",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.+):(\\d+):(\\d+):\\s+(\\d+):(\\d+)\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "endLine": 4,
+                    "endColumn": 5,
+                    "severity": 6,
+                    "message": 7
+                }
+            }
+        },
+        {
+            "label": "deps",
+            "type": "shell",
+            "command": "mix deps"
+        },
+        {
+            "label": "deps.get",
+            "type": "shell",
+            "command": "mix deps.get"
+        },
+        {
             "label": "clean",
             "type": "shell",
             "command": "mix clean"
